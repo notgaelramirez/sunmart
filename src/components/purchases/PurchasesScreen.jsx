@@ -6,16 +6,9 @@ const PurchasesScreen = () => {
 
   const [purchases, setPurchases] = useState()
 
-
-  const token = {
-    headers:{
-      Authorization: `Bearer ${localStorage.getItem('token')}`
-    }
-  }
-
   useEffect(() =>{
     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/purchases'
-    axios.get(URL, token)
+    axios.get(URL, getConfig())
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
   }, [])
