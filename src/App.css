@@ -7,6 +7,7 @@ body{
 *{
   max-width: 100vw;
   max-height: 100vh;
+  box-sizing: border-box;
 }
 
 .App{
@@ -28,7 +29,6 @@ body{
   min-width: 75vw;
   display: flex;
   padding-left: 3px;
-  margin-top: 6px;
 }
 
 .img-area{
@@ -38,7 +38,8 @@ body{
 }
 
 .img-area > img{
-  max-height: inherit;
+  padding-top: 3px;
+  max-height: 5vh;
 }
 
 .title-area{
@@ -47,16 +48,20 @@ body{
   /* background-color: brown; */
   min-width: 26vw;
   max-width: 53vw;
-  max-height: 7vh;
+  max-height: 7vh;;
 }
 
-.title-area > h1{
-  font-size: 3.5vh;
+.sunmart{
+  font-size: 5vh;
   margin: 0;
   color: white;
+  margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .burger-btn{
+  position: relative;
+  z-index: 3;
   min-width: 10px;
 }
 
@@ -78,7 +83,47 @@ body{
 }
 
 .nav{
-  display: none;
+  position: fixed;
+  display: flex;
+  min-height: 90vh;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  padding-right: 80px;
+  margin-top: 10vh;
+  padding-bottom: 120px;
+  gap: 10px;
+  transition: transform 400ms ease;
+  transform: translateX(100%);
+}
+
+.nav-open{
+  transition: transform 400ms ease;
+  transform: translateX(0%);
+}
+
+.nav > ul{
+  list-style: none;
+}
+
+.nav-link{
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  color: #0071CE;
+  min-height: 10vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.1);
+  transition: transform 400ms ease;
+}
+
+.nav-link:hover{
+  background-color:  rgb(219, 219, 219);
+  cursor: pointer;
+  transform: scale(1.4);
+  transition: transform 400ms ease;
 }
 
 .banner{

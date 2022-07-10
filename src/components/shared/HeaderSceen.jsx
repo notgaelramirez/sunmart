@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import logo from '/src/img/logo.png'
+import { NavLink } from 'react-router-dom'
 
 export const HeaderSceen = () => {
+
+  const nav = useRef()
+  console.log(nav)
+
+  const onClickBrg = () =>{
+    nav.current.classList.toggle('nav-open')
+  }
+
   return (
     <header className='header'>
       <div className='first-area'>
         <div className='title-area'>
-          <h1>Sunmart</h1>
+          <NavLink className='sunmart' to='/'>
+            Sunmart
+          </NavLink>
         </div>
         
         <div className='img-area'>
@@ -16,16 +27,31 @@ export const HeaderSceen = () => {
       </div>
 
       <div className="burger-btn">
-        <button>
+        <button onClick={onClickBrg}>
           <i className="fa-solid fa-bars"></i>
         </button>
       </div>
 
-      <nav className='nav'>
+      <nav ref={nav} className='nav'>
         <ul className='nav-ul'>
-          <li className='nav-li'>Login</li>
-          <li className='nav-li'>Purchases</li>
-          <li className='nav-li'>Cart</li>
+          <li className='nav-li'>
+            <NavLink to='/login' className='nav-link'>
+              <i class="fa-solid fa-user"></i>
+              Login
+            </NavLink>
+          </li>
+          <li className='nav-li'>
+            <NavLink to='/purchases' className='nav-link'>
+              <i class="fa-solid fa-list-check"></i>
+              Purchases
+            </NavLink>
+          </li>
+          <li className='nav-li'>
+            <NavLink to='/cart' className='nav-link'>
+              <i className="fa-solid fa-cart-shopping"></i>
+              Cart
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
