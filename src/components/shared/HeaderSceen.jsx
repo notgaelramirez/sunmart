@@ -35,19 +35,19 @@ export const HeaderSceen = () => {
       <nav ref={nav} className='nav'>
         <ul className='nav-ul'>
           <li className='nav-li'>
-            <NavLink to='/login' className='nav-link'>
+            <NavLink onClick={onClickBrg} to='/login' className='nav-link'>
               <i className="fa-solid fa-user"></i>
               Login
             </NavLink>
           </li>
           <li className='nav-li'>
-            <NavLink to='/purchases' className='nav-link'>
+            <NavLink onClick={onClickBrg} to='/purchases' className='nav-link'>
               <i className="fa-solid fa-list-check"></i>
               Purchases
             </NavLink>
           </li>
           <li className='nav-li'>
-            <NavLink to='/cart' className='nav-link'>
+            <NavLink onClick={onClickBrg} to='/cart' className='nav-link'>
               <i className="fa-solid fa-cart-shopping"></i>
               Cart
             </NavLink>

@@ -1,8 +1,11 @@
 import React from 'react'
 import { Outlet, Navigate } from 'react-router-dom'
 
-const ProtectedRoutes = ({isLogged}) => {
-  if(isLogged){
+const ProtectedRoutes = () => {
+
+  const token = localStorage.getItem('token')
+
+  if(token){
     return <Outlet />
   } else{
     return <Navigate to='/login' />

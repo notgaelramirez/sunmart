@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const FormScreen = () => {
 
   const [isErrorLogin, setIsErrorLogin] = useState(false)
 
   const {handleSubmit, reset, register} = useForm()
+
+  const navigate = useNavigate()
 
   const submit = data =>{
     console.log(data)
@@ -16,6 +19,8 @@ const FormScreen = () => {
     axios.post(URL, data)
       .then(res => {
         localStorage.setItem('token', res.data.data.token)
+        console.log(res.data.data.token)
+        navigate('/')
       })
       .catch(err => {
         localStorage.setItem('token', '')
@@ -35,10 +40,10 @@ const FormScreen = () => {
       <form onSubmit={handleSubmit(submit)} className='login' action="">
         <ul>
           <li>
-            <b>Email: </b>mason@gmail.com
+            <b>Email: </b>gael1423@gmail.com
           </li>
           <li>
-            <b>Password: </b>mason1234
+            <b>Password: </b>holahola
           </li>
         </ul>
 
