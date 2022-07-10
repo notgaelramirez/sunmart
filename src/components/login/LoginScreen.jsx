@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import FormScreen from './FormScreen'
+import UserLogged from './UserLogged'
 
 const LoginScreen = () => {
+
+  const [token, setToken] = useState('')
+
+  const changeToken = localStorage.getItem('token')
+
+  useEffect(() => {
+    setToken(localStorage.getItem('token'))
+  }, [changeToken])
+  
+
   return (
     <div>
-      <form className='login' action="">
-        
-      </form>
+      {
+        token ?
+          <UserLogged />
+          :
+          <FormScreen />
+          
+      }
     </div>
   )
 }
