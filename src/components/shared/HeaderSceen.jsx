@@ -36,13 +36,13 @@ export const HeaderSceen = () => {
         <ul className='nav-ul'>
           <li className='nav-li'>
             <NavLink to='/login' className='nav-link'>
-              <i class="fa-solid fa-user"></i>
+              <i className="fa-solid fa-user"></i>
               Login
             </NavLink>
           </li>
           <li className='nav-li'>
             <NavLink to='/purchases' className='nav-link'>
-              <i class="fa-solid fa-list-check"></i>
+              <i className="fa-solid fa-list-check"></i>
               Purchases
             </NavLink>
           </li>
