@@ -9,9 +9,11 @@ const PurchasesScreen = () => {
   useEffect(() =>{
     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/purchases'
     axios.get(URL, getConfig())
-      .then(res => console.log(res.data))
+      .then(res => setPurchases(res.data.data.purchases))
       .catch(err => console.log(err))
   }, [])
+
+  console.log(purchases)
 
   return (
     <div>PurchasesScreen</div>
