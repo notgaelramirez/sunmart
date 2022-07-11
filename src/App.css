@@ -2,6 +2,7 @@
 body{
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  background-color: rgb(221, 221, 221);
 }
 
 *{
@@ -176,4 +177,52 @@ body{
 .card > button{
   margin-top: 15px;
   margin-left: 10px;
+}
+
+/*===== CART ====*/
+.cart{
+  background-color: white;
+  min-height: auto;
+  padding-bottom: 20px;
+  max-width: 90vw;
+  margin-left: 4vw;
+  margin-bottom: 20px;
+  margin-top: 2vh;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 0px black;
+}
+
+.cart-header{
+  padding-top: 15px;
+  min-width: 100%;
+  max-height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-header > i{
+  font-size: 3.5vh;
+  margin-top: 3px;
+}
+
+.cart-header > p{
+  padding-left: 10px;
+  padding-top: 0px;
+  margin-top: 0;
+  font-size: 3.5vh;
+}
+
+.items{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 6vh;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item{
+  background-color: #0071CE;
+  min-width: 70vw;
+  max-width: 70vw;
+  min-height: 12vh;
 }
