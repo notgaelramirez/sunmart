@@ -212,6 +212,8 @@ body{
   font-size: 3.5vh;
 }
 
+/*===== ITEMS =====*/
+
 .items{
   display: flex;
   margin-top: 20px;
@@ -221,8 +223,73 @@ body{
 }
 
 .item{
-  background-color: #0071CE;
+  border: .5px solid rgba(97, 95, 95, 0.548);
+  border-radius: 0px 5px 5px 5px;
   min-width: 70vw;
   max-width: 70vw;
   min-height: 12vh;
+  display: flex;
+}
+
+.item-photo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34%;
+  max-width: 34%;
+  min-height: inherit;
+}
+
+.item-aside{
+  min-width: 66%;
+  max-width: 66%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-info{
+  min-height: 50%;
+  max-height: 50%;
+}
+
+.item-buttons{
+  min-height: 50%;
+  max-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-quantity{
+  min-width: 66%;
+  display: flex;
+  gap: 10px;
+}
+
+.item-quantity > div> input{
+  max-width: 40px;
+  background-color: none;
+  border-radius: 3px;
+  border: .5px solid rgba(149, 157, 165, 0.4);
+}
+
+.item-delete{
+  transition: 300ms ease;
+  font-size: 3vh;
+  margin-bottom: 3px;
+}
+
+.item-delete:hover{
+  cursor: pointer;
+  transition: 300ms ease;
+  transform: scale(1.2);
+  color: crimson;
+}
+
+.item-info{
+  display: flex;
+  margin-left: 14px;
+  justify-content: flex-start;
+  align-items: center;
 }

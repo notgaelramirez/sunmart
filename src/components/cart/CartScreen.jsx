@@ -2,6 +2,9 @@ import React from 'react'
 import ItemScreen from './ItemScreen'
 
 const CartScreen = () => {
+
+  const items = [1,2]
+
   return (
     <article className='cart'>
       <header className='cart-header'>
@@ -10,12 +13,7 @@ const CartScreen = () => {
       </header>
 
       <div className="items">
-        <ItemScreen />
-        <ItemScreen />
-        <ItemScreen />
-        <ItemScreen />
-        <ItemScreen />
-        <ItemScreen />
+        {items.map(item => <ItemScreen />)}
       </div>
     </article>
   )
